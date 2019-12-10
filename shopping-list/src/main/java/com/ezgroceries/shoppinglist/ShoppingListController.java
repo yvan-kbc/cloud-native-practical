@@ -19,7 +19,7 @@ public class ShoppingListController {
 
     @PostMapping("/shopping-lists")
     @ResponseStatus(HttpStatus.CREATED)
-    public ShoppingList createShoppingList(@RequestBody String name) {
+    public ShoppingList createShoppingList(@RequestBody ShoppingListName name) {
         ShoppingList sl = new ShoppingList("eb18bb7c-61f3-4c9f-981c-55b1b8ee8915", "Stephanie's birthday");
         return sl;
     }
@@ -54,9 +54,10 @@ public class ShoppingListController {
     }
     //--- END --------
 
+
     @PostMapping("/shopping-lists/{shoppingListId}/cocktails")
     @ResponseStatus(HttpStatus.CREATED)
-    public List<UUIDContainer> addCocktailsToShoppingList(@RequestBody String name) {
+    public List<UUIDContainer> addCocktailsToShoppingList(@RequestBody ShoppingListName name) {
         return Arrays.asList(
                 new UUIDContainer(new CocktailResource(
                         UUID.fromString("23b3d85a-3928-41c0-a533-6538a71e17c4"),
@@ -87,6 +88,19 @@ public class ShoppingListController {
         public UUID getUuid() {
             return cocktailId;
         }
+    }
+
+    static class ShoppingListName {
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        private String name;
+
     }
     //--- END --------
 
