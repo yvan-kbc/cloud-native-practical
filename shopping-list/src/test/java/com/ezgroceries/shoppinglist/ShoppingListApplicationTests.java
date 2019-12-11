@@ -71,15 +71,14 @@ class ShoppingListApplicationTests {
 	}
 
 	@Test
-	@Disabled
 	void basicCocktailSearchTest() throws  Exception {
 
 		mockMvc.perform(get("/cocktails?search=Russian"))
 				.andExpect(status().isOk())
 				.andExpect(content().contentType(MediaType.APPLICATION_JSON))
-				.andExpect(jsonPath("$", Matchers.hasSize(2)))
-				.andExpect(jsonPath("$[1].name", Matchers.is("Blue Margerita")))
-				.andExpect(jsonPath("$[0].name", Matchers.is("Margerita")));
+				.andExpect(jsonPath("$", Matchers.hasSize(Matchers.greaterThan(0))))
+				.andExpect(jsonPath("$[0].name", Matchers.is("Black Russian")))
+				.andExpect(jsonPath("$[1].name", Matchers.is("White Russian")));
 	}
 
 }
