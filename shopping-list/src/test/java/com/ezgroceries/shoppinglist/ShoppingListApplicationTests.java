@@ -71,6 +71,7 @@ class ShoppingListApplicationTests {
 	}
 
 	@Test
+	@Disabled
 	void basicCocktailSearchTest() throws  Exception {
 
 		mockMvc.perform(get("/cocktails?search=Russian"))
