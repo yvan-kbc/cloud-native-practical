@@ -1,4 +1,4 @@
-package com.ezgroceries.cocktail;
+package com.ezgroceries.external;
 
 import java.util.Date;
 import java.util.List;

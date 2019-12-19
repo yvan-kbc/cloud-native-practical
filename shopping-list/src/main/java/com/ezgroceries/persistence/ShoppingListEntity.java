@@ -1,4 +1,4 @@
-package com.ezgroceries.cocktail;
+package com.ezgroceries.persistence;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

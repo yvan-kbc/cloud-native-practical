@@ -1,4 +1,4 @@
-package com.ezgroceries.cocktail;
+package com.ezgroceries.service;
 
 import com.ezgroceries.utils.StringSetConverter;
 

@@ -1,4 +1,4 @@
-package com.ezgroceries.cocktail;
+package com.ezgroceries.external;
 
 public class CocktailDBClientImpl implements CocktailDBClient {
     @Override

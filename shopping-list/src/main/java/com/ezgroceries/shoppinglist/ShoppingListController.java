@@ -1,6 +1,6 @@
 package com.ezgroceries.shoppinglist;
 
-import com.ezgroceries.cocktail.CocktailResource;
+import com.ezgroceries.external.CocktailResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
