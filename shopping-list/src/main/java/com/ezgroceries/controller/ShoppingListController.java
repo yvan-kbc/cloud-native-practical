@@ -1,4 +1,4 @@
-package com.ezgroceries.shoppinglist;
+package com.ezgroceries.controller;
 
 import com.ezgroceries.external.CocktailResource;
 import org.springframework.http.HttpStatus;

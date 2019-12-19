@@ -1,11 +1,8 @@
-package com.ezgroceries.service;
+package com.ezgroceries.persistence;
 
 import com.ezgroceries.utils.StringSetConverter;
 
-import javax.persistence.Convert;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Set;
 import java.util.UUID;
 
@@ -16,6 +13,10 @@ public class CocktailEntity {
     private UUID id;
     private String idDrink;
     private String name;
+
+    @ManyToMany(mappedBy = "cocktails")
+    Set<ShoppingListEntity> shoppingLists;
+
     @Convert(converter = StringSetConverter.class)
     private Set<String> ingredients;
 
